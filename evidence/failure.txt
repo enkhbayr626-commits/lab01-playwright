@@ -1,0 +1,43 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 .local/failure.spec.ts:3:5 › Санаатай алдаа (5.2s)
+
+
+  1) .local/failure.spec.ts:3:5 › Санаатай алдаа ───────────────────────────────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('.title')
+    Expected: "Orders"
+    Received: "Products"
+    Timeout:  2000ms
+
+    Call log:
+      - Expect "toHaveText" locator('.title') with timeout 2000ms
+      - waiting for locator('.title')
+        21 × locator resolved to <span class="title" data-test="title">Products</span>
+           - unexpected value "Products"
+
+
+       7 |   await page.getByRole('button', { name: 'Login' }).click();
+       8 |   try {
+    >  9 |     await expect(page.locator('.title')).toHaveText('Orders', { timeout: 2000 });
+         |                                          ^
+      10 |   } finally {
+      11 |     await page.getByRole('button', { name: 'Open Menu' }).click();
+      12 |     await page.getByRole('link', { name: 'Logout' }).click();
+        at /mnt/c/Users/Dell/Documents/чанарын баталгаа ба туршилт/lab01-playwright-simple/.local/failure.spec.ts:9:42
+
+    Error Context: .local/failure-results/failure-Санаатай-алдаа/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    .local/failure-results/failure-Санаатай-алдаа/trace.zip
+    Usage:
+
+        npx playwright show-trace .local/failure-results/failure-Санаатай-алдаа/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    .local/failure.spec.ts:3:5 › Санаатай алдаа ────────────────────────────────────────────────────

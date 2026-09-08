@@ -1,0 +1,12 @@
+WSL Ubuntu 24.04, Chromium, Playwright 1.63.0
+
+Running 3 tests using 1 worker
+  PASS: Зөв нэр, нууц үгээр нэвтрэх (4.1s)
+  PASS: Буруу нууц үгээр нэвтрэх (1.6s)
+  PASS: Бараа сагсанд нэмэх (3.6s)
+3 passed (16.0s)
+
+Санаатай алдаа тусдаа ажилласан:
+Expected: Orders
+Received: Products
+Exit code: 1 (хүлээгдсэн үр дүн)
